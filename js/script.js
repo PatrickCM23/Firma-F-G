@@ -55,7 +55,7 @@ const firmaHTML = `
     <!-- CONTACTO -->
     <div style="text-align:left;">
         📞 +51 ${telefono.value || "000 000 000"}<br>
-        ✉ ${correo.value || "correo@empresa.com"}<br>
+        ✉  ${correo.value || "correo@empresa.com"}<br>
         🌐 https://www.fyg-ingenieros.com/
     </div>
 
