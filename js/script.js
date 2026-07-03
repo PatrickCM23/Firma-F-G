@@ -33,12 +33,12 @@ const firmaHTML = `
 <tr>
 
 <!-- LOGO -->
-<td style="padding-right:18px; vertical-align:top; border-right:2px solid #1f6b3a;">
-<img src="https://patrickcm23.github.io/Firma-F-G/img/logo.png" width="120" style="display:block;">
+<td style="vertical-align:top; padding-right:18px; border-right:2px solid #1f6b3a;">
+    <img src="https://patrickcm23.github.io/Firma-F-G/img/logo.png" width="120" style="display:block;">
 </td>
 
-<!-- INFO -->
-<td style="padding-left:18px; vertical-align:top;">
+<!-- INFORMACIÓN -->
+<td style="vertical-align:top; padding-left:18px;">
 
 <!-- NOMBRE -->
 <div style="font-size:15px; font-weight:700; color:#1f6b3a;">
