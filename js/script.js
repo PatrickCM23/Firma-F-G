@@ -68,15 +68,6 @@ const firmaHTML = `
 
     <div style="height:10px;"></div>
 
-    <!-- REDES -->
-    <div style="font-size:12px; text-align:left;">
-        <a href="https://www.facebook.com/fygingenierosasociados/" style="color:#1f6b3a; text-decoration:none;">Facebook</a>
-        &nbsp;|&nbsp;
-        <a href="https://www.instagram.com/fygingenierosasociados/" style="color:#1f6b3a; text-decoration:none;">Instagram</a>
-        &nbsp;|&nbsp;
-        <a href="https://www.linkedin.com/company/fygingenierosasociados/" style="color:#1f6b3a; text-decoration:none;">LinkedIn</a>
-    </div>
-
 </td>
 
 </tr>
