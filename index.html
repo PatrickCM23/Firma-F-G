@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Firma F&G</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Firmas F&G</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
-    <h1>Generador de Firma F&G</h1>
-    <p>Si ves esta página, GitHub Pages está funcionando correctamente.</p>
+
+<div class="app-container">
+
+    <div class="header">
+        <h1>F&G Ingenieros Asociados</h1>
+        <p>Generador de Firmas Corporativas</p>
+    </div>
+
+    <div class="form-container">
+
+        <input type="text" id="nombre" placeholder="Nombre completo">
+        <input type="text" id="cargo" placeholder="Cargo">
+        <input type="text" id="telefono" placeholder="Celular">
+        <input type="email" id="correo" placeholder="Correo electrónico">
+
+    </div>
+
+    <div class="preview-container">
+
+        <h2>Vista previa</h2>
+
+        <div class="firma" id="firmaPreview">
+
+            <div class="left">
+                <img src="img/logo.png" class="logo">
+
+                <div class="redes">
+                    <a href="https://www.facebook.com/fygingenierosasociados/" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/fygingenierosasociados/" target="_blank">Instagram</a>
+                    <a href="https://www.linkedin.com/company/fygingenierosasociados/" target="_blank">LinkedIn</a>
+                    <a href="https://www.fyg-ingenieros.com/" target="_blank">Web</a>
+                </div>
+            </div>
+
+            <div class="right">
+
+                <h3 id="prevNombre">Nombre Apellido</h3>
+                <p id="prevCargo">Cargo</p>
+
+                <p id="prevTelefono">📞 +51 --- --- ---</p>
+                <p id="prevCorreo">✉ correo@empresa.com</p>
+
+                <div class="cert">
+                    <img src="img/certificacion.png">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <button id="copiarBtn">Copiar firma</button>
+
+</div>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
