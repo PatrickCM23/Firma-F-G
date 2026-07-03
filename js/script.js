@@ -38,7 +38,7 @@ const firmaHTML = `
 </td>
 
 <!-- INFORMACIÓN -->
-<td align="left" valign="top" style="padding-left:18px; text-align:left; vertical-align:top; font-family:Arial, Helvetica, sans-serif;">
+<td align="left" valign="top" style="padding-left:18px; text-align:left; vertical-align:top;">
 
 <!-- NOMBRE -->
 <div style="font-size:15px; font-weight:700; color:#1f6b3a;">
@@ -90,7 +90,7 @@ try {
         })
     ]);
 
-    alert("✔ Firma multinacional copiada correctamente");
+    alert("✔ Firma copiada correctamente");
 
 } catch (err) {
 
