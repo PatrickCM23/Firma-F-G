@@ -38,7 +38,7 @@ const firmaHTML = `
 </td>
 
 <!-- INFORMACIÓN -->
-<td style="vertical-align:top; padding-left:18px;">
+<td align="left" valign="top" style="padding-left:18px; text-align:left; vertical-align:top; font-family:Arial, Helvetica, sans-serif;">
 
 <!-- NOMBRE -->
 <div style="font-size:15px; font-weight:700; color:#1f6b3a;">
