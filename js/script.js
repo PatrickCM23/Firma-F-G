@@ -3,9 +3,9 @@ const cargo = document.getElementById("cargo");
 const telefono = document.getElementById("telefono");
 const correo = document.getElementById("correo");
 
-// ==============================
-// 🔄 VISTA PREVIA
-// ==============================
+// =========================
+// 🔄 VISTA PREVIA LIVE
+// =========================
 nombre.addEventListener("input", () => {
 document.getElementById("prevNombre").innerText = nombre.value || "Nombre Apellido";
 });
@@ -15,67 +15,80 @@ document.getElementById("prevCargo").innerText = cargo.value || "Cargo";
 });
 
 telefono.addEventListener("input", () => {
-document.getElementById("prevTelefono").innerText = "📞 +51 " + (telefono.value || "--- --- ---");
+document.getElementById("prevTelefono").innerText = "📞 +51 " + (telefono.value || "000 000 000");
 });
 
 correo.addEventListener("input", () => {
 document.getElementById("prevCorreo").innerText = "✉ " + (correo.value || "correo@empresa.com");
 });
 
-// ==============================
-// 🏢 FIRMA PRO FINAL (GMAIL + OUTLOOK)
-// ==============================
+// =========================
+// 🏢 FIRMA MULTINACIONAL FINAL
+// =========================
 document.getElementById("copiarBtn").addEventListener("click", async () => {
 
 const firmaHTML = `
-<table cellpadding="0" cellspacing="0" style="font-family:Arial, sans-serif; font-size:13px; color:#333;">
+<table cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333; line-height:1.4;">
+
 <tr>
 
 <!-- LOGO -->
-<td style="padding-right:15px; vertical-align:top;">
+<td style="padding-right:18px; vertical-align:top; border-right:2px solid #1f6b3a;">
 <img src="https://patrickcm23.github.io/Firma-F-G/img/logo.png" width="120" style="display:block;">
 </td>
 
-<!-- DATOS -->
-<td style="padding-left:15px; vertical-align:top;">
+<!-- INFO -->
+<td style="padding-left:18px; vertical-align:top;">
 
 <!-- NOMBRE -->
-<span style="font-size:15px; font-weight:bold; color:#1f6b3a;">
+<div style="font-size:15px; font-weight:700; color:#1f6b3a;">
 ${nombre.value || "Nombre Apellido"}
-</span>
-<br>
+</div>
 
 <!-- CARGO -->
-<span style="font-size:13px; color:#555;">
+<div style="font-size:13px; color:#555; margin-top:2px;">
 ${cargo.value || "Cargo"}
-</span>
+</div>
 
-<br><br>
+<div style="height:10px;"></div>
 
 <!-- CONTACTO -->
-<span>📞 +51 ${telefono.value || "--- --- ---"}</span><br>
-<span>✉ ${correo.value || "correo@empresa.com"}</span><br>
-<span>🌐 https://www.fyg-ingenieros.com</span>
+<div style="font-size:13px;">
+📞 <span style="color:#333;">+51 ${telefono.value || "000 000 000"}</span>
+</div>
 
-<br><br>
+<div style="font-size:13px;">
+✉ <span style="color:#333;">${correo.value || "correo@empresa.com"}</span>
+</div>
+
+<div style="font-size:13px;">
+🌐 <a href="https://www.fyg-ingenieros.com/" style="color:#1f6b3a; text-decoration:none;">
+www.fyg-ingenieros.com
+</a>
+</div>
+
+<div style="height:12px;"></div>
 
 <!-- CERTIFICACIÓN -->
-<img src="https://patrickcm23.github.io/Firma-F-G/img/certificacion.png" width="180" style="display:block;">
+<img src="https://patrickcm23.github.io/Firma-F-G/img/certificacion.png"
+width="170"
+style="display:block; margin-top:5px;">
 
-<br>
+<div style="height:10px;"></div>
 
 <!-- REDES -->
-<span style="font-size:12px;">
+<div style="font-size:12px; color:#666;">
 <a href="https://www.facebook.com/fygingenierosasociados/" style="color:#1f6b3a; text-decoration:none;">Facebook</a>
 &nbsp;|&nbsp;
 <a href="https://www.instagram.com/fygingenierosasociados/" style="color:#1f6b3a; text-decoration:none;">Instagram</a>
 &nbsp;|&nbsp;
 <a href="https://www.linkedin.com/company/fygingenierosasociados/" style="color:#1f6b3a; text-decoration:none;">LinkedIn</a>
-</span>
+</div>
 
 </td>
 
 </tr>
+
 </table>
 `;
 
@@ -86,19 +99,19 @@ try {
         })
     ]);
 
-    alert("✔ Firma PRO copiada correctamente. Pégala en Gmail.");
-    
+    alert("✔ Firma multinacional copiada correctamente");
+
 } catch (err) {
 
-    // fallback (por si navegador no soporta clipboard HTML)
-    const fallback = document.createElement("textarea");
-    fallback.value = firmaHTML;
-    document.body.appendChild(fallback);
-    fallback.select();
+    // fallback ultra compatible
+    const temp = document.createElement("textarea");
+    temp.value = firmaHTML;
+    document.body.appendChild(temp);
+    temp.select();
     document.execCommand("copy");
-    document.body.removeChild(fallback);
+    document.body.removeChild(temp);
 
-    alert("✔ Firma copiada (modo compatible). Pégala en Gmail.");
+    alert("✔ Firma copiada en modo compatible");
 }
 
 });
