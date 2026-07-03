@@ -25,25 +25,19 @@ document.getElementById("prevCorreo").innerText = "✉ " + (correo.value || "cor
 // ===============================
 // 📋 COPIAR FIRMA (VERSIÓN GMAIL)
 // ===============================
-document.getElementById("copiarBtn").addEventListener("click", () => {
+document.getElementById("copiarBtn").addEventListener("click", async () => {
 
-// Seleccionamos la firma visual
-const firma = document.getElementById("firmaPreview");
+const firma = document.getElementById("firmaPreview").outerHTML;
 
-// Crear rango de selección
-const range = document.createRange();
-range.selectNode(firma);
+// Crear un Blob HTML (esto es CLAVE)
+const blob = new Blob([firma], { type: "text/html" });
+const data = [new ClipboardItem({ "text/html": blob })];
 
-// Limpiar selecciones anteriores
-window.getSelection().removeAllRanges();
-window.getSelection().addRange(range);
+try {
+    await navigator.clipboard.write(data);
+    alert("✔ Firma copiada correctamente. Pégala en Gmail.");
+} catch (err) {
+    alert("❌ Tu navegador no soporta copia avanzada. Usa Chrome.");
+}
 
-// Copiar como contenido enriquecido (HTML visual)
-document.execCommand("copy");
-
-// Limpiar selección
-window.getSelection().removeAllRanges();
-
-// Mensaje de éxito
-alert("✔ Firma copiada correctamente. Pégala en Gmail.");
 });
