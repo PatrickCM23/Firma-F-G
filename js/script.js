@@ -33,53 +33,53 @@ const firmaHTML = `
 <tr>
 
 <!-- LOGO -->
-<td style="vertical-align:top; padding-right:18px; border-right:2px solid #1f6b3a;">
+<td valign="top" style="padding-right:15px; border-right:2px solid #1f6b3a;">
     <img src="https://patrickcm23.github.io/Firma-F-G/img/logo.png" width="120" style="display:block;">
 </td>
 
-<!-- INFORMACIÓN -->
-<td align="left" valign="top" style="padding-left:18px; text-align:left; vertical-align:top;">
+<!-- CONTENIDO -->
+<td valign="top" style="padding-left:15px; text-align:left;">
 
-<!-- NOMBRE -->
-<div style="font-size:15px; font-weight:700; color:#1f6b3a;">
-${nombre.value || "Nombre Apellido"}
-</div>
+    <!-- NOMBRE -->
+    <div style="font-size:15px; font-weight:bold; color:#1f6b3a; text-align:left;">
+        ${nombre.value || "Nombre Apellido"}
+    </div>
 
-<!-- CARGO -->
-<div style="font-size:13px; color:#555; margin-top:2px;">
-${cargo.value || "Cargo"}
-</div>
+    <!-- CARGO -->
+    <div style="font-size:13px; color:#555; text-align:left; margin-top:2px;">
+        ${cargo.value || "Cargo"}
+    </div>
 
-<div style="height:10px;"></div>
+    <div style="height:10px;"></div>
 
-<!-- CONTACTO -->
-<div style="font-size:13px;">
-📞 <span style="color:#333;">+51 ${telefono.value || "000 000 000"}</span>
-</div>
+    <!-- CONTACTO -->
+    <div style="text-align:left;">
+        📞 +51 ${telefono.value || "000 000 000"}<br>
+        ✉ ${correo.value || "correo@empresa.com"}<br>
+        🌐 https://www.fyg-ingenieros.com/
+    </div>
 
-<div style="font-size:13px;">
-✉ <span style="color:#333;">${correo.value || "correo@empresa.com"}</span>
-</div>
+    <div style="height:12px;"></div>
 
-<div style="font-size:13px;">
-🌐 <a href="https://www.fyg-ingenieros.com/" style="color:#1f6b3a; text-decoration:none;">
-www.fyg-ingenieros.com
-</a>
-</div>
+    <!-- CERTIFICACIÓN -->
+    <img src="https://patrickcm23.github.io/Firma-F-G/img/certificacion.png"
+    width="170"
+    style="display:block;">
 
-<div style="height:12px;"></div>
+    <div style="height:10px;"></div>
 
-<!-- CERTIFICACIÓN -->
-<img src="https://patrickcm23.github.io/Firma-F-G/img/certificacion.png"
-width="170"
-style="display:block; margin-top:5px;">
-
-<div style="height:10px;"></div>
+    <!-- REDES -->
+    <div style="font-size:12px; text-align:left;">
+        <a href="https://www.facebook.com/fygingenierosasociados/" style="color:#1f6b3a; text-decoration:none;">Facebook</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.instagram.com/fygingenierosasociados/" style="color:#1f6b3a; text-decoration:none;">Instagram</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/company/fygingenierosasociados/" style="color:#1f6b3a; text-decoration:none;">LinkedIn</a>
+    </div>
 
 </td>
 
 </tr>
-
 </table>
 `;
 
