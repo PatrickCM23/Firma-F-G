@@ -34,7 +34,7 @@ const firmaHTML = `
 
 <!-- LOGO -->
 <td valign="top" style="padding-right:15px; border-right:2px solid #1f6b3a;">
-    <img src="https://patrickcm23.github.io/Firma-F-G/img/logo.png" width="120" style="display:block;">
+    <img src="logo.png" style="width:180px; max-width:180px; display:block;">
 </td>
 
 <!-- CONTENIDO -->
